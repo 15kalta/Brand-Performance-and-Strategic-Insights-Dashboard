@@ -1,6 +1,6 @@
 # Brand-Performan-Strategic-Insights-Dashboard
 
-## 🍫 Awesome Chocolates: Sales & Profitability Insights Dashboard
+## Awesome Chocolates: Sales & Profitability Insights Dashboard
 A dynamic, interactive data visualization tool built to explore the performance of a chocolate brand, focusing on sales, profitability, and operational efficiency metrics to drive business strategy.
 ## Purpose of the Dashboard
 This Power BI dashboard is a strategic decision-making tool that provides stakeholders with a comprehensive view of Awesome Chocolates' performance. It transforms raw data into actionable insights by focusing on key metrics.
@@ -85,7 +85,7 @@ This formula creates a disconnected table that can be used in visuals, giving th
 A dynamic line chart that visualizes Sales, Boxes, Shipments, Cost, or Profit over a 13-month period. It leverages a custom parameter field on the Y-axis, allowing users to select the metric they want to analyze, thus providing a flexible and interactive tool for time-series analysis.
 ## Shipment Analysis
 The shipment analysis section is designed to provide insight into operational efficiency. It includes a bar chart with a zoom slider that visualizes the distribution of shipments by box bins. This allows for detailed analysis of shipment volumes. Additionally, a donut chart highlights the LBS% (Low Box Shipments), a key operational KPI that measures the percentage of all shipments that fall into a low-box category.
-# ### Performance Analysis Tables
+# Performance Analysis Tables
 The dashboard utilizes two interconnected tables—**Product Performance** and **Sales Person Performance**—that leverage bookmarks for seamless navigation. This professional design choice allows stakeholders to instantly pivot between different levels of analysis, from products to people. Both tables include a **Profit Target Indicator** (✅ or ❌) that visually tracks performance against a set goal, enabling a quick and intuitive assessment of top performers and areas needing improvement.
 * **Product Performance Table:** This table provides a **granular breakdown** of each product's sales, profit, and **Profit %**. The visual indicator makes it easy to spot which products are meeting or exceeding profitability targets.
 * **Sales Person Performance Table:** This table shifts the analytical focus to the sales team's contributions. It breaks down key metrics by individual, allowing managers to use the **Profit Target Indicator** to assess individual performance and make data-driven decisions on coaching or incentives.
