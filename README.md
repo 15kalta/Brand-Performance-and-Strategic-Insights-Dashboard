@@ -67,3 +67,25 @@ Value: 60.29% (from the gauge chart visual)
 This metric measures the percentage change in sales from the previous month, providing insight into business momentum.
 Formula: Latest MoM Sales Change % = VAR prev_month_sales = CALCULATE( [Total Sales], DATEADD( 'calendar'[Date], -1, MONTH ) ) RETURN DIVIDE( [Total Sales] - prev_month_sales, prev_month_sales )
 Value: -10.76%
+## Parameter for Dynamic Visuals
+This project includes a custom Parameter table, which is a powerful feature for enhancing user interactivity. It enables stakeholders to dynamically change the metric displayed in the Sales Analysis visual from a slicer or filter. This allows for a more flexible and user-driven analysis without the need for multiple static charts.
+The parameter is designed to work with key measures, allowing users to switch between viewing Sales, Boxes, Shipments, Cost, or Profit on the same chart. This provides a single-source solution for multiple analytical needs.
+* DAX Formula for the Parameter
+The parameter table is created using a DAX formula. Each line of the formula defines a new field that can be selected by the user. The syntax includes the display name of the metric, a reference to the actual measure, and an optional sort order.
+* Code snippet
+Parameter = {
+    ("Sales", NAMEOF('Measures (2)'[Total Sales]), 0),
+    ("Boxes", NAMEOF('Measures (2)'[Total Boxes]), 1),
+    ("Shipments", NAMEOF('Measures (2)'[Total Shipments]), 2),
+    ("Cost", NAMEOF('Measures (2)'[Total Cost]), 3),
+    ("Profit", NAMEOF('Measures (2)'[Total Profit]), 4)
+}
+This formula creates a disconnected table that can be used in visuals, giving the end-user full control over the data they want to see, which is an excellent demonstration of advanced Power BI skills.
+## Sales Analysis Graph
+A dynamic line chart that visualizes Sales, Boxes, Shipments, Cost, or Profit over a 13-month period. It leverages a custom parameter field on the Y-axis, allowing users to select the metric they want to analyze, thus providing a flexible and interactive tool for time-series analysis.
+## Shipment Analysis
+The shipment analysis section is designed to provide insight into operational efficiency. It includes a bar chart with a zoom slider that visualizes the distribution of shipments by box bins. This allows for detailed analysis of shipment volumes. Additionally, a donut chart highlights the LBS% (Low Box Shipments), a key operational KPI that measures the percentage of all shipments that fall into a low-box category.
+# ### Performance Analysis Tables
+The dashboard utilizes two interconnected tables—**Product Performance** and **Sales Person Performance**—that leverage bookmarks for seamless navigation. This professional design choice allows stakeholders to instantly pivot between different levels of analysis, from products to people. Both tables include a **Profit Target Indicator** (✅ or ❌) that visually tracks performance against a set goal, enabling a quick and intuitive assessment of top performers and areas needing improvement.
+* **Product Performance Table:** This table provides a **granular breakdown** of each product's sales, profit, and **Profit %**. The visual indicator makes it easy to spot which products are meeting or exceeding profitability targets.
+* **Sales Person Performance Table:** This table shifts the analytical focus to the sales team's contributions. It breaks down key metrics by individual, allowing managers to use the **Profit Target Indicator** to assess individual performance and make data-driven decisions on coaching or incentives.
