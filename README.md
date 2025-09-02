@@ -18,9 +18,9 @@ The dashboard was built using the following tools and technologies:
 ## Data Source
 The project's dataset was obtained from Kaggle and is structured to enable a comprehensive analysis of business performance over a 13-month period.
 The data model adheres to a star schema, a best practice for business intelligence, consisting of key dimension and fact tables that are interconnected for efficient querying and analysis.
-Fact Tables:
+### Fact Tables:
 * shipments: This is the primary fact table, containing transactional data for each shipment, including measures like Boxes and Cost, as well as keys to other dimension tables.
-Dimension Tables:
+### Dimension Tables:
 * calendar: A dedicated dimension table for all time-based analysis, including attributes like Date, Month, and Year, which is critical for time intelligence functions.
 * products: A dimension table containing product details such as Category and Cost per box.
 * people: A dimension table used for analyzing performance by individuals or teams, a key component for a user-centric dashboard.
