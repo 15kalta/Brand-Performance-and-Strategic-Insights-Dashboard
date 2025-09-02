@@ -1,4 +1,4 @@
-# Brand-Performan-Strategic-Insights-Dashboard
+# Business Performance Analytics using Power BI
 
 ## Awesome Chocolates: Sales & Profitability Insights Dashboard
 A dynamic, interactive data visualization tool built to explore the performance of a chocolate brand, focusing on sales, profitability, and operational efficiency metrics to drive business strategy.
